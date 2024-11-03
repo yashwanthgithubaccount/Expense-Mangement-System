@@ -1,23 +1,20 @@
 {
-  "name": "expanse-management-system",
+  "name": "expense-mangement-system",
   "version": "1.0.0",
-  "description": "expanse tracker app",
+  "description": "ExpenseMangement",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm cache clean --force && npm install --prefix client --legacy-peer-deps && npm run build --prefix client"
-
-
+    "dev": "concurrently \"npm run start\" \"npm run client\""
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Techinfoyt",
+  "license": "MIT",
   "dependencies": {
-   "bootstrap": "^5.3.3",
+    "bootstrap": "^5.3.3",
     "colors": "^1.4.0",
     "concurrently": "^8.2.2",
     "cors": "^2.8.5",
