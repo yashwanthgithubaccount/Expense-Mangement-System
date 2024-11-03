@@ -1,16 +1,15 @@
 {
   "name": "expense-mangement-system",
   "version": "1.0.0",
-  "description": "ExpenseMangement",
+  "description": "Expense Management",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run start\" \"npm run client\"",
-    "build":"npm install --prefix ./client && npm run build --prefix ./client && npm install"
-
+    "client": "npm install --prefix client && npm run build --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm cache clean --force && npm install --prefix client --legacy-peer-deps && npm run build --prefix client"
   },
   "keywords": [],
   "author": "Techinfoyt",
